@@ -40,7 +40,7 @@
         android:textSize="20sp"
         android:textColor="#06f"
         android:onClick="showToast"
-        android:background="@drawable/bg_btn4"
+        android:background="@drawable/selector_orange"
         android:layout_below="@id/btn_3"
         android:layout_marginTop="10dp"/>
     <TextView
@@ -48,7 +48,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/bg_btn4"
+        android:background="@drawable/selector_orange"
         android:text="@string/tv_test1"
         android:textSize="20sp"
         android:gravity="center"

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnButton;
     private Button mBtnEditText;
     private Button mBtnEditEx;
+    private Button mRadioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton = findViewById(R.id.btn_button);
         mBtnEditText = findViewById(R.id.btn_EditText);
         mBtnEditEx = findViewById(R.id.btn_EditEx);
+        mRadioButton=findViewById(R.id.btn_radiobutton);
         setListeners();
     }
     protected void setListeners(){
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton.setOnClickListener(onclick);
         mBtnEditText.setOnClickListener(onclick);
         mBtnEditEx.setOnClickListener(onclick);
+        mRadioButton.setOnClickListener(onclick);
 
     }
 
@@ -50,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_EditEx:
                     intent = new Intent(MainActivity.this, EditExActivity.class);
+                    break;
+                case R.id.btn_radiobutton:
+                    intent = new Intent(MainActivity.this, RadioButtonActivity.class);
                     break;
                 default:
                     break;
