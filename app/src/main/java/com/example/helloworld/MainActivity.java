@@ -8,14 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.helloworld.ListView.ListViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnTextView;
     private Button mBtnButton;
     private Button mBtnEditText;
     private Button mBtnEditEx;
-    private Button mRadioButton;
-
+    private Button mBtnRadioButton;
+    private Button mBtnCheckBox;
+    private Button mBtnImageView;
+    private Button mBtnListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton = findViewById(R.id.btn_button);
         mBtnEditText = findViewById(R.id.btn_EditText);
         mBtnEditEx = findViewById(R.id.btn_EditEx);
-        mRadioButton=findViewById(R.id.btn_radiobutton);
+        mBtnRadioButton=findViewById(R.id.btn_radiobutton);
+        mBtnCheckBox=findViewById(R.id.btn_checkbox);
+        mBtnImageView=findViewById(R.id.btn_imageview);
+        mBtnListView=findViewById(R.id.btn_listview);
         setListeners();
     }
     protected void setListeners(){
@@ -33,8 +40,10 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton.setOnClickListener(onclick);
         mBtnEditText.setOnClickListener(onclick);
         mBtnEditEx.setOnClickListener(onclick);
-        mRadioButton.setOnClickListener(onclick);
-
+        mBtnRadioButton.setOnClickListener(onclick);
+        mBtnCheckBox.setOnClickListener(onclick);
+        mBtnImageView.setOnClickListener(onclick);
+        mBtnListView.setOnClickListener(onclick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -56,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_radiobutton:
                     intent = new Intent(MainActivity.this, RadioButtonActivity.class);
+                    break;
+                case R.id.btn_checkbox:
+                    intent = new Intent(MainActivity.this, CheckBoxActivity.class);
+                    break;
+                case R.id.btn_imageview:
+                    intent = new Intent(MainActivity.this, ImageViewActivity.class);
+                    break;
+                case R.id.btn_listview:
+                    intent = new Intent(MainActivity.this, ListViewActivity.class);
                     break;
                 default:
                     break;
