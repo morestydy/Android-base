@@ -1,14 +1,15 @@
 package com.example.helloworld;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.helloworld.ListView.ListViewActivity;
+import com.example.helloworld.gridview.GridViewActivity;
+import com.example.helloworld.recyclerview.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnCheckBox;
     private Button mBtnImageView;
     private Button mBtnListView;
+    private Button mBtnRecyclerView;
+    private Button mBtnGridView;
+    private Button mBtnWebView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         mBtnCheckBox=findViewById(R.id.btn_checkbox);
         mBtnImageView=findViewById(R.id.btn_imageview);
         mBtnListView=findViewById(R.id.btn_listview);
+        mBtnGridView=findViewById(R.id.btn_gridview);
+        mBtnRecyclerView=findViewById(R.id.btn_recyclerview);
+        mBtnWebView=findViewById(R.id.btn_webview);
+
         setListeners();
     }
     protected void setListeners(){
@@ -44,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         mBtnCheckBox.setOnClickListener(onclick);
         mBtnImageView.setOnClickListener(onclick);
         mBtnListView.setOnClickListener(onclick);
+        mBtnGridView.setOnClickListener(onclick);
+        mBtnRecyclerView.setOnClickListener(onclick);
+        mBtnWebView.setOnClickListener(onclick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -74,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_listview:
                     intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.btn_gridview:
+                    intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn_recyclerview:
+                    intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                    break;
+                case R.id.btn_webview:
+                    intent = new Intent(MainActivity.this,WebViewActivity.class);
                     break;
                 default:
                     break;
