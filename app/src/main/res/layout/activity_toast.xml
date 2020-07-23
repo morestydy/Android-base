@@ -19,4 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="带图片(自定义)"/>
+    <Button
+        android:id="@+id/btn_toast_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToastUtil"/>
 </LinearLayout>

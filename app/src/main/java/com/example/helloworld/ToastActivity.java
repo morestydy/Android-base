@@ -12,8 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.util.ToastUtil;
+
 public class ToastActivity extends AppCompatActivity {
-    private Button mBtnToast1,mBtnToast2,mBtnToast3;
+    private Button mBtnToast1,mBtnToast2,mBtnToast3,mBtnToast4;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,10 +24,12 @@ public class ToastActivity extends AppCompatActivity {
         mBtnToast1 = findViewById(R.id.btn_toast_1);
         mBtnToast2= findViewById(R.id.btn_toast_2);
         mBtnToast3 = findViewById(R.id.btn_toast_3);
+        mBtnToast4 = findViewById(R.id.btn_toast_4);
         OnClick onClick = new OnClick();
         mBtnToast1.setOnClickListener(onClick);
         mBtnToast2.setOnClickListener(onClick);
         mBtnToast3.setOnClickListener(onClick);
+        mBtnToast4.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -49,7 +53,11 @@ public class ToastActivity extends AppCompatActivity {
                     imageView.setImageResource(R.drawable.icon_smile);
                     textView.setText("自定义Toast");
                     toastCustom.setView(view);
+                    toastCustom.setDuration(Toast.LENGTH_LONG);
                     toastCustom.show();
+                    break;
+                case R.id.btn_toast_4:
+                    ToastUtil.showMsg(getApplicationContext(),"包装过的Toast");
                     break;
             }
         }

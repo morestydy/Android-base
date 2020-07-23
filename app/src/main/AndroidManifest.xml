@@ -12,12 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UIActivity"></activity>
+        <activity android:name=".DialogActivity"></activity>
         <activity android:name=".recyclerview.PuRecyclerViewActivity" />
         <activity android:name=".recyclerview.LinearRecyclerViewActivity" />
         <activity android:name=".recyclerview.HorRecyclerViewActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ImageViewActivity" />
-        <activity android:name=".ToastActivity"/>
+        <activity android:name=".ToastActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".CheckBoxActivity" />
         <activity android:name=".RadioButtonActivity" />
