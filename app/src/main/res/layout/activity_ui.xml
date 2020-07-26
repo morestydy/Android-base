@@ -84,12 +84,18 @@
             android:layout_height="wrap_content"
             android:text="AlertDialog"
             android:textAllCaps="false"/>
-           <Button
-            android:id="@+id/btn_progress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Progress"
-            android:textAllCaps="false"/>
+       <Button
+        android:id="@+id/btn_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Progress"
+        android:textAllCaps="false"/>
+       <Button
+        android:id="@+id/btn_customdialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义Progress"
+        android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/tv_1"
