@@ -102,6 +102,12 @@
             android:layout_height="wrap_content"
             android:text="Popuowindow"
             android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_activitytest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity测试"
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/tv_1"

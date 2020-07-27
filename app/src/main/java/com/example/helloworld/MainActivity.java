@@ -15,9 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mBtnUI = findViewById(R.id.btn_ui);
+        mBtnOth = findViewById(R.id.btn_others);
         Onclick onclick = new Onclick();
         mBtnUI.setOnClickListener(onclick);
-//        mBtnOth.setOnClickListener(onclick);
+        mBtnOth.setOnClickListener(onclick);
     }
 
     class Onclick implements View.OnClickListener{
@@ -29,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_ui:
                     intent = new Intent(MainActivity.this, UIActivity.class);
                     break;
-//                case R.id.btn_others:
-//                    intent = new Intent(MainActivity.this,)
+                case R.id.btn_others:
+                    intent = new Intent(MainActivity.this,OtherActivity.class);
+                    break;
             }
 
             startActivity(intent);
