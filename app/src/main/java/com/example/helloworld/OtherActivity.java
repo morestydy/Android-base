@@ -7,11 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.fragment.ContainerActivity;
 import com.example.helloworld.jump.AActivity;
 
 public class OtherActivity extends AppCompatActivity {
 
-    private Button mBtnLifeCycle,mBtnJump;
+    private Button mBtnLifeCycle,mBtnJump,mBtnFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,10 +20,15 @@ public class OtherActivity extends AppCompatActivity {
 
         mBtnLifeCycle=findViewById(R.id.btn_lifecycle);
         mBtnJump = findViewById(R.id.btn_btnJump);
+        mBtnFragment = findViewById(R.id.btn_Fragment);
+        setListeners();
+    }
 
+    void setListeners(){
         OnClick onClick = new OnClick();
         mBtnLifeCycle.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
+        mBtnFragment.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -35,6 +41,9 @@ public class OtherActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_btnJump:
                     intent = new Intent(OtherActivity.this, AActivity.class);
+                    break;
+                case R.id.btn_Fragment:
+                    intent = new Intent(OtherActivity.this, ContainerActivity.class);
                     break;
                 default:
                     break;
