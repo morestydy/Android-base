@@ -15,4 +15,9 @@
         android:layout_height="wrap_content"
         android:text="others"
         android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_exercise"
+        android:text="练习"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

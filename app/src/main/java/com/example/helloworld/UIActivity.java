@@ -27,7 +27,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnToast;
     private Button mBtnAlertdialog;
     private Button mBtnProgress;
-    private Button mBtnCustomDialog,mBtnPopupWindow;
+    private Button mBtnCustomDialog,mBtnPopupWindow,mBtnConstraint;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +48,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnProgress = findViewById(R.id.btn_progress);
         mBtnCustomDialog = findViewById(R.id.btn_customdialog);
         mBtnPopupWindow = findViewById(R.id.btn_popupwindow);
+        mBtnConstraint = findViewById(R.id.btn_constraint);
         setListeners();
     }
     protected void setListeners(){
@@ -68,6 +69,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnProgress.setOnClickListener(onclick);
         mBtnCustomDialog.setOnClickListener(onclick);
         mBtnPopupWindow.setOnClickListener(onclick);
+        mBtnConstraint.setOnClickListener(onclick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -122,6 +124,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_popupwindow:
                     intent = new Intent(UIActivity.this,PopupWindowActivity.class);
+                    break;
+                case R.id.btn_constraint:
+                    intent = new Intent(UIActivity.this,ConstraintViewActivity.class);
                     break;
                 default:
                     break;

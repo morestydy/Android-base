@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+<!--    <TextView-->
+<!--        android:id="@+id/Hello"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="20dp"-->
+<!--        android:background="#0000FF"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/World"-->
+<!--        android:text="Hello"-->
+<!--        android:textColor="#000"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/World"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#FF0000"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toRightOf="@+id/Hello"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="20dp"-->
+<!--        android:text="World"-->
+
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteY="1dp" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/Gitcode"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:background="#00FFFF"-->
+    <!--        android:textColor="#000"-->
+    <!--        app:layout_goneMarginLeft="10dp"-->
+    <!--        tools:ignore="MissingConstraints"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:text="Gitcode"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/World"/>-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guideline"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintGuide_begin="10dp"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn1"-->
+<!--        android:text="button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="@+id/guideline"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--    <Button-->
+<!--        android:id="@+id/btn2"-->
+<!--        android:text="button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="@+id/guideline"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/btn1"/>-->
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        android:id="@+id/barrier"
+        app:constraint_referenced_ids="tvPhone,tvPassword"
+        />
+
+    <TextView android:layout_width="wrap_content"
+        android:text="手机号码"
+        android:id="@+id/tvPhone"
+        android:gravity="center_vertical|left"
+        android:padding="10dp"
+        android:layout_height="50dp"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:text="密码"
+        android:padding="10dp"
+        android:gravity="center_vertical|left"
+        android:id="@+id/tvPassword"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone"
+        android:layout_height="wrap_content"/>
+
+    <EditText android:layout_width="wrap_content"
+        android:hint="输入手机号码"
+        android:id="@+id/etPassword"
+        android:inputType="phone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPhone"
+        app:layout_constraintLeft_toLeftOf="@id/barrier"
+        android:layout_height="wrap_content"/>
+
+    <EditText android:layout_width="wrap_content"
+        android:hint="输入密码"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintLeft_toLeftOf="@id/barrier"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

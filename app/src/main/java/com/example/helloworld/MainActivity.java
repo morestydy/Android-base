@@ -7,18 +7,22 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.ex.ExerciseActivity;
+
 public class MainActivity extends AppCompatActivity {
     private Button mBtnUI;
-    private Button mBtnOth;
+    private Button mBtnOth,mBtnExercise;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mBtnUI = findViewById(R.id.btn_ui);
         mBtnOth = findViewById(R.id.btn_others);
+        mBtnExercise = findViewById(R.id.btn_exercise);
         Onclick onclick = new Onclick();
         mBtnUI.setOnClickListener(onclick);
         mBtnOth.setOnClickListener(onclick);
+        mBtnExercise.setOnClickListener(onclick);
     }
 
     class Onclick implements View.OnClickListener{
@@ -32,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_others:
                     intent = new Intent(MainActivity.this,OtherActivity.class);
+                    break;
+                case R.id.btn_exercise:
+                    intent = new Intent(MainActivity.this, ExerciseActivity.class);
                     break;
             }
 
