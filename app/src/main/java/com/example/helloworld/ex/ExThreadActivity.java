@@ -33,7 +33,7 @@ public class ExThreadActivity extends AppCompatActivity implements View.OnClickL
         public void handleMessage(@NonNull Message msg) {
             switch (msg.what){
                 case UPDATE_TEXT:
-                    // TODO:
+                    // TODO: 2020/8/1  
                     mText2.setText("Nice to meet u!");
                     break;
                 default:

@@ -1,6 +1,5 @@
 package com.example.helloworld;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -48,13 +47,13 @@ public class HandlerActivity extends AppCompatActivity {
                 }
             }
         };
-        mhandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(HandlerActivity.this,ButtonActivity.class);
-                startActivity(intent);
-            }
-        },5000);
+//        mhandler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Intent intent = new Intent(HandlerActivity.this,ButtonActivity.class);
+//                startActivity(intent);
+//            }
+//        },5000);
         new Thread(){
             @Override
             public void run() {

@@ -7,12 +7,15 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.broadcast.BroadActivity;
+import com.example.helloworld.datastorage.DataStorageActivity;
 import com.example.helloworld.fragment.ContainerActivity;
 import com.example.helloworld.jump.AActivity;
 
 public class OtherActivity extends AppCompatActivity {
 
-    private Button mBtnLifeCycle,mBtnJump,mBtnFragment,mBtnEvent,mBtnHandler;
+    private Button mBtnLifeCycle,mBtnJump,mBtnFragment,mBtnEvent,mBtnHandler
+            ,mBtnData,mBtnBrocast,mBtnAnim;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,9 @@ public class OtherActivity extends AppCompatActivity {
         mBtnFragment = findViewById(R.id.btn_Fragment);
         mBtnEvent = findViewById(R.id.btn_event);
         mBtnHandler = findViewById(R.id.btn_handler);
+        mBtnData = findViewById(R.id.btn_data);
+        mBtnBrocast = findViewById(R.id.btn_brocast);
+        mBtnAnim = findViewById(R.id.btn_anim);
         setListeners();
     }
 
@@ -33,6 +39,9 @@ public class OtherActivity extends AppCompatActivity {
         mBtnFragment.setOnClickListener(onClick);
         mBtnEvent.setOnClickListener(onClick);
         mBtnHandler.setOnClickListener(onClick);
+        mBtnData.setOnClickListener(onClick);
+        mBtnBrocast.setOnClickListener(onClick);
+        mBtnAnim.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -54,6 +63,15 @@ public class OtherActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_handler:
                     intent = new Intent(OtherActivity.this, HandlerActivity.class);
+                    break;
+                case R.id.btn_data:
+                    intent = new Intent(OtherActivity.this, DataStorageActivity.class);
+                    break;
+                case R.id.btn_brocast:
+                    intent = new Intent(OtherActivity.this, BroadActivity.class);
+                    break;
+                case R.id.btn_anim:
+                    intent = new Intent(OtherActivity.this, ObjectAnimActivity.class);
                     break;
                 default:
                     break;
