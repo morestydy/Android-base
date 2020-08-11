@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_createdatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Database"/>
+        <EditText
+            android:layout_marginTop="80dp"
+            android:id="@+id/et_name"
+            android:textSize="16sp"
+            android:textColor="#ffad33"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="5dp"
+            android:background="@drawable/bg_username"
+            android:hint="书名:"/>
+        <EditText
+            android:id="@+id/et_author"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="作者名字"/>
+
+        <EditText
+            android:id="@+id/et_page"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Pages"/>
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="价格"/>
+
+        <Button
+            android:id="@+id/btn_adddata"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加数据"/>
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更新数据"/>
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除数据"/>
+        <Button
+            android:id="@+id/btn_querydata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查询数据"/>
+        <TextView
+            android:id="@+id/tv_getdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="使用SQL操作数据库"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btn_sql_insert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用SQL插入数据"/>
+        <Button
+            android:id="@+id/btn_sql_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用SQL更新数据"/>
+        <Button
+            android:id="@+id/btn_sql_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用SQL删除数据"/>
+        <Button
+            android:id="@+id/btn_sql_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用SQL查询数据"/>
+        <TextView
+            android:text="显示"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_SqlGetdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+
+</ScrollView>

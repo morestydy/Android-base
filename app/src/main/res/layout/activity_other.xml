@@ -47,4 +47,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="属性动画"/>
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SQlite"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LitePal"
+        android:textAllCaps="false"/>
 </LinearLayout>

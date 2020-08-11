@@ -15,8 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".broadcast.BroadActivity2"></activity>
-        <activity android:name=".ObjectAnimActivity"/>
+        <activity android:name=".SQLitestorage.LitePalActivity"></activity>
+        <activity android:name=".broadcast.BroadActivity2" />
+        <activity android:name=".ObjectAnimActivity" />
+        <activity android:name=".SQLitestorage.DataActivity" />
         <activity android:name=".broadcast.BroadActivity" />
         <activity android:name=".datastorage.SharedPerferencesActivity" />
         <activity android:name=".datastorage.DataStorageActivity" />

@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.helloworld.SQLitestorage.DataActivity;
+import com.example.helloworld.SQLitestorage.LitePalActivity;
 import com.example.helloworld.broadcast.BroadActivity;
 import com.example.helloworld.datastorage.DataStorageActivity;
 import com.example.helloworld.fragment.ContainerActivity;
@@ -15,7 +17,7 @@ import com.example.helloworld.jump.AActivity;
 public class OtherActivity extends AppCompatActivity {
 
     private Button mBtnLifeCycle,mBtnJump,mBtnFragment,mBtnEvent,mBtnHandler
-            ,mBtnData,mBtnBrocast,mBtnAnim;
+            ,mBtnData,mBtnBrocast,mBtnAnim,mBtnSQlite,mBtnLitePal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,8 @@ public class OtherActivity extends AppCompatActivity {
         mBtnData = findViewById(R.id.btn_data);
         mBtnBrocast = findViewById(R.id.btn_brocast);
         mBtnAnim = findViewById(R.id.btn_anim);
+        mBtnSQlite=findViewById(R.id.btn_sqlite);
+        mBtnLitePal = findViewById(R.id.btn_litepal);
         setListeners();
     }
 
@@ -42,6 +46,8 @@ public class OtherActivity extends AppCompatActivity {
         mBtnData.setOnClickListener(onClick);
         mBtnBrocast.setOnClickListener(onClick);
         mBtnAnim.setOnClickListener(onClick);
+        mBtnSQlite.setOnClickListener(onClick);
+        mBtnLitePal.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -72,6 +78,12 @@ public class OtherActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_anim:
                     intent = new Intent(OtherActivity.this, ObjectAnimActivity.class);
+                    break;
+                case R.id.btn_sqlite:
+                    intent = new Intent(OtherActivity.this, DataActivity.class);
+                    break;
+                case R.id.btn_litepal:
+                    intent = new Intent(OtherActivity.this, LitePalActivity.class);
                     break;
                 default:
                     break;
