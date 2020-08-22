@@ -14,4 +14,12 @@
         android:text="Thread 1"
         android:textAllCaps="false"
         tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_skype_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="skype登录界面"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_exThread"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SQLitestorage.LitePalActivity"></activity>
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".Service.ServiceActivity" />
+        <activity android:name=".Service.UiUpdateActivity" />
+        <activity android:name=".web.WebApiActivity" />
+        <activity android:name=".SQLitestorage.LitePalActivity" />
         <activity android:name=".broadcast.BroadActivity2" />
         <activity android:name=".ObjectAnimActivity" />
         <activity android:name=".SQLitestorage.DataActivity" />
@@ -34,6 +42,8 @@
             android:name=".jump.BActivity"
             android:label="B" />
         <activity android:name=".HandlerActivity" />
+        <activity android:name=".denglu.activity.LoginActivity" />
+        <activity android:name=".Exercise.SkypeViewActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".LifeCycleActivity" />
         <activity android:name=".ConstraintViewActivity" />
