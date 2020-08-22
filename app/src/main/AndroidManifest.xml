@@ -20,6 +20,10 @@
             android:enabled="true"
             android:exported="true"></service>
 
+        <service android:name=".Service.MyIntentService"
+            tools:ignore="Instantiatable" />
+
+
         <activity android:name=".Service.ServiceActivity" />
         <activity android:name=".Service.UiUpdateActivity" />
         <activity android:name=".web.WebApiActivity" />

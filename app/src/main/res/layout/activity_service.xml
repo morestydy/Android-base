@@ -36,4 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_bind_service"
         android:text="解除绑定服务"/>
+    <Button
+        android:id="@+id/btn_startintent_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_unbind_service"
+        android:text="IntentService"
+        android:textAllCaps="false"/>
 </RelativeLayout>
