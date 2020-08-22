@@ -9,15 +9,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.helloworld.SQLitestorage.DataActivity;
 import com.example.helloworld.SQLitestorage.LitePalActivity;
+import com.example.helloworld.Service.ServiceActivity;
 import com.example.helloworld.broadcast.BroadActivity;
 import com.example.helloworld.datastorage.DataStorageActivity;
+import com.example.helloworld.denglu.activity.LoginActivity;
 import com.example.helloworld.fragment.ContainerActivity;
 import com.example.helloworld.jump.AActivity;
+import com.example.helloworld.web.WebApiActivity;
 
 public class OtherActivity extends AppCompatActivity {
 
     private Button mBtnLifeCycle,mBtnJump,mBtnFragment,mBtnEvent,mBtnHandler
-            ,mBtnData,mBtnBrocast,mBtnAnim,mBtnSQlite,mBtnLitePal;
+            ,mBtnData,mBtnBrocast,mBtnAnim,mBtnSQlite,mBtnLitePal,mBtnDl,mBtnWebApi;
+    private Button mBtnService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,9 @@ public class OtherActivity extends AppCompatActivity {
         mBtnAnim = findViewById(R.id.btn_anim);
         mBtnSQlite=findViewById(R.id.btn_sqlite);
         mBtnLitePal = findViewById(R.id.btn_litepal);
+        mBtnDl = findViewById(R.id.btn_denglu);
+        mBtnWebApi = findViewById(R.id.btn_webapi);
+        mBtnService = findViewById(R.id.btn_service);
         setListeners();
     }
 
@@ -48,6 +56,9 @@ public class OtherActivity extends AppCompatActivity {
         mBtnAnim.setOnClickListener(onClick);
         mBtnSQlite.setOnClickListener(onClick);
         mBtnLitePal.setOnClickListener(onClick);
+        mBtnDl.setOnClickListener(onClick);
+        mBtnWebApi.setOnClickListener(onClick);
+        mBtnService.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -84,6 +95,15 @@ public class OtherActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_litepal:
                     intent = new Intent(OtherActivity.this, LitePalActivity.class);
+                    break;
+                case R.id.btn_denglu:
+                    intent = new Intent(OtherActivity.this, LoginActivity.class);
+                    break;
+                case R.id.btn_webapi:
+                    intent = new Intent(OtherActivity.this, WebApiActivity.class);
+                    break;
+                case R.id.btn_service:
+                    intent = new Intent(OtherActivity.this, ServiceActivity.class);
                     break;
                 default:
                     break;
